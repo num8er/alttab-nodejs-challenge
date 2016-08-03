@@ -7,9 +7,9 @@ const
   db = require('./../../../components/database'),
   User = db.model('User');
 
-module.exports = (id, callback) => {
+module.exports = (email, callback) => {
   User.findOne({
-    _id: id,
+    email: email,
     active: true,
     deleted: false
   }, (err, result) => {

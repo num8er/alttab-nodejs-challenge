@@ -31,7 +31,7 @@ module.exports = {
       },
       default: uuid.v4
     },
-    username: {
+    email: {
       type: Schema.Types.String,
       required: true,
       index: true
@@ -40,8 +40,7 @@ module.exports = {
       type: Schema.Types.String,
       required: true
     },
-    firstname: 'String',
-    lastname: 'String',
+    name: 'String',
     active: {
       type: Schema.Types.Boolean,
       default: true

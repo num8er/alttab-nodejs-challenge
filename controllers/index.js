@@ -2,5 +2,5 @@
 
 'use strict';
 
-module.exports.Auth = require('./Auth');
+module.exports.AccessTokens = require('./AccessTokens');
 module.exports.Users = require('./Users');

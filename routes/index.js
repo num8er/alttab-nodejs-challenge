@@ -8,7 +8,7 @@ const
 
 let routes = ['api'];
 let aliases = [
-  {route: 'api/auth', alias: 'auth'}
+  {route: 'api/login', alias: 'auth'}
 ];
 
 // defining routes of current sub-route

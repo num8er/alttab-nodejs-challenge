@@ -4,5 +4,4 @@
 
 module.exports.create = require('./methods/create');
 module.exports.getById = require('./methods/getById');
-module.exports.getByEmail = require('./methods/getByEmail');
-module.exports.userExistsByEmail = require('./methods/userExistsByEmail');
+module.exports.destroy = require('./methods/destroy');

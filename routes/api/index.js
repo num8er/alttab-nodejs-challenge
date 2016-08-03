@@ -5,12 +5,14 @@
 const
   express = require('express'),
   router = express.Router(),
-  isAuthenticated = require('../../middlewares/checkAuth');
+  requestHelper = require('./../../components/request-helper');
 
 let
-  routes = [],
+  routes = [
+    'login',
+    'register'
+  ],
   guardedRoutes = [
-    'auth',
     'profile'
   ];
 
@@ -18,7 +20,7 @@ let
 routes.forEach((item) => router.use('/' + item, require('./' + item)));
 
 // defining routes that will proceed (filtered) through guardFn
-let guardFn = isAuthenticated;
+let guardFn = requestHelper.isAuthenticated;
 guardedRoutes.forEach((item) => router.use('/' + item, guardFn, require('./' + item)));
 
 module.exports = router;
